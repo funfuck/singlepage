@@ -3,33 +3,33 @@ var app = angular.module('app', ['ngRoute']);
 // configure our routes
 app.config(function($routeProvider, $locationProvider) {
 
+    // สำคัญกับการทำเรื่อง social share
     $locationProvider.html5Mode(true);
 
     $routeProvider
 
     .otherwise({redirectTo : '/'})
 
-        // route for the home page
+        // route ของหน้า home
         .when('/', {
             templateUrl : 'pages/home.html',
             controller  : 'mainController'
         })
 
+        // route ของหน้า view product
         .when('/product', {
             templateUrl: 'pages/view.html',
             controller: 'productController'
         })
 
-        // route for the about page
+        // route ของหน้า about
         .when('/about', {
             templateUrl : 'pages/about.html',
-            controller  : 'aboutController'
         })
 
-        // route for the contact page
+        // route ของหน้า contact
         .when('/contact', {
             templateUrl : 'pages/contact.html',
-            controller  : 'contactController'
         });
     });
 
@@ -44,5 +44,3 @@ app.controller('productController', function($scope, $location, $http, $location
     var errorCallback = function(response) {console.log("fail : ", response);}
     $http({method: "GET", url: "http://localhost:8080/product/"+ searchObj.id}).then(successCallback, errorCallback);
 });
-app.controller('aboutController', function($scope) {});
-app.controller('contactController', function($scope) {});

@@ -1,43 +1,38 @@
-<!-- index.html -->
 <!DOCTYPE html>
 <html ng-app="app">
 <head>
-  <!-- SCROLLS -->
-  <!-- load bootstrap and fontawesome via CDN -->
+
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" />
 
-  <!-- SPELLS -->
-  <!-- load angular and angular route via CDN -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular.js/1.5.8/angular-route.min.js"></script>
   <script src="app.js"></script>
+
+  <!-- สำคัญกับการทำเรื่อง social share -->
   <base href="/">
+
 </head>
 <body>
 
-  <!-- HEADER AND NAVBAR -->
-  <!-- <header> -->
-    <nav class="navbar navbar-default" style="margin: 0px">
-      <div class="container">
-        <div class="navbar-header">
-          <a class="navbar-brand" href="/">Single Page Application</a>
-        </div>
-
-        <ul class="nav navbar-nav navbar-right">
-          <li><a href="/">Home</a></li>
-          <li><a href="/about">About</a></li>
-          <li><a href="/contact">Contact</a></li>
-        </ul>
+  <!-- NAVBAR -->
+  <nav class="navbar navbar-default" style="margin: 0px">
+    <div class="container">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="/">Single Page Application</a>
       </div>
-    </nav>
-  <!-- </header> -->
 
-  <!-- MAIN CONTENT AND INJECTED VIEWS -->
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="/">Home</a></li>
+        <li><a href="/about">About</a></li>
+        <li><a href="/contact">Contact</a></li>
+      </ul>
+    </div>
+  </nav>
+
   <div id="main">
 
-    <!-- angular templating -->
-    <!-- this is where content will be injected -->
+    <!-- ณ จุดที่มีการเปลี่ยนเนื้อหาของหน้าเว็บ -->
     <div ng-view></div>
 
   </div>
